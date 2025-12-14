@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* CSS variables for theme */
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+  --placeholder: #64748b; /* slate-500 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617; /* slate-950 */
+    --foreground: #e5e7eb; /* slate-200 */
+    --placeholder: #94a3b8; /* slate-400 */
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+input,
+textarea {
+  color: var(--foreground);
+  background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+}
