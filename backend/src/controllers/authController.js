@@ -2,8 +2,6 @@ import bcrypt from "bcryptjs";
 import User from "../models/User.js";
 import generateToken from "../utils/generateToken.js";
 
-// @desc    Register user
-// @route   POST /api/auth/register
 export const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -38,8 +36,6 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// @desc    Login user
-// @route   POST /api/auth/login
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
